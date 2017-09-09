@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'eval-source-map',
   entry: [
+    'babel-polyfill',
     'webpack-dev-server/client?http://localhost:3003',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
@@ -29,6 +30,9 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development')
     })
   ],
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {

@@ -1,6 +1,2 @@
-const API_KEY = 'e4893b3442c3456de56d4ebcc1f27adc';
-
-
-export default {
-  API_KEY,
-};
+export const imagesBaseUrl = 'https://image.tmdb.org/t/p/w500';
+export const apiBaseUrl = 'https://api.themoviedb.org/3';

@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "material-ui": "^0.18.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-hot-loader": "next",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.2",
     "react-router-redux": "^4.0.8",
+    "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.7.2"
   },
   "devDependencies": {
@@ -26,12 +29,14 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.1.0",
     "html-webpack-plugin": "^2.29.0",
+    "redux-saga": "^0.15.6",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server"
+    "start.dev": "NODE_ENV=development node server",
+    "start.prod": "node server NODE_ENV=production"
   },
   "author": "",
   "license": "ISC"

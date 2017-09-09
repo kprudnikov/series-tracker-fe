@@ -5,7 +5,8 @@ const config = require('./webpack.config');
 new DevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
-  stats: 'errors-only'
+  stats: 'errors-only',
+  historyApiFallback: true,
 }).listen('3003', 'localhost', (err) => {
   if (err) console.log(err);
   else console.log('listening to port 3003');
