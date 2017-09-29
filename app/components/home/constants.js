@@ -1,0 +1,9 @@
+export const UPDATE_SEARCH_QUERY = 'home/UPDATE_SEARCH_QUERY';
+
+export const SEARCH_MOVIE_SEND = 'home/SEARCH_MOVIE_SEND';
+export const SEARCH_MOVIE_SUCCESS = 'home/SEARCH_MOVIE_SUCCESS';
+export const SEARCH_MOVIE_ERROR = 'home/SEARCH_MOVIE_ERROR';
+
+// export const SEARCH_TV_SEND = 'home/SEARCH_TV_SEND';
+export const SEARCH_TV_SUCCESS = 'home/SEARCH_TV_SUCCESS';
+export const SEARCH_TV_ERROR = 'home/SEARCH_TV_ERROR';

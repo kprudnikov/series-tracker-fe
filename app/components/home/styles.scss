@@ -1,0 +1,15 @@
+.list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .movie, .series {
+        width: 25%;
+        //flex: 1 25%;
+        //float: left;
+        //padding: 0 5px;
+    
+        img {
+            max-width: 100%;
+        }
+    }
+}

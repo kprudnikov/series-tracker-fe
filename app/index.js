@@ -18,6 +18,8 @@ import appReducer from './reducers';
 import HomeComponent from './components/home/index';
 import HomeSagas from './components/home/sagas';
 
+require('./styles.scss');
+
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(appReducer, applyMiddleware(sagaMiddleware));
 injectTapEventPlugin();

@@ -3,10 +3,16 @@ const apiKey = require(`../env/${process.env.NODE_ENV}/keys`).apiKey;
 
 export default {
   searchMovie,
+  searchTVSeries,
 }
 
 function searchMovie (query) {
   return get('search/movie', { query });
+}
+
+
+function searchTVSeries (query) {
+  return get('search/tv', { query });
 }
 
 // private

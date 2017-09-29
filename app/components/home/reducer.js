@@ -1,25 +1,33 @@
+import {
+  SEARCH_MOVIE_SUCCESS,
+  SEARCH_TV_SUCCESS,
+  UPDATE_SEARCH_QUERY,
+} from './constants';
+
 const initialState = {
-  imageUrl: 'http://a.espncdn.com/combiner/i?img=/i/espn/teamlogos/500/instant_awesome.png',
+  searchQuery: '',
+  imageUrl: '',
   moviesList: [],
+  seriesList: [],
 };
 
 export default function (state=initialState, action) {
   switch (action.type) {
-    case 'GET_NEW_IMAGE':
+    case SEARCH_MOVIE_SUCCESS:
       return {
-        ...initialState,
-        imageUrl: 'http://www.planwallpaper.com/static/images/1886374.jpg',
-      };
-    case 'SEARCH_MOVIE_SUCCESS':
-      console.log(action.data.results);
-      const state = {
-        ...initialState,
+        ...state,
         moviesList: action.data.results,
       };
-
-      console.log(state);
-
-      return state;
+    case SEARCH_TV_SUCCESS:
+      return {
+        ...state,
+        seriesList: action.data.results,
+      };
+    case UPDATE_SEARCH_QUERY:
+      return {
+        ...state,
+        searchQuery: action.query,
+      };
     default:
       return initialState;
   }

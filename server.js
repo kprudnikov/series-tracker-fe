@@ -9,5 +9,8 @@ new DevServer(webpack(config), {
   historyApiFallback: true,
 }).listen('3003', 'localhost', (err) => {
   if (err) console.log(err);
-  else console.log('listening to port 3003');
+  else {
+    console.log(`Environment: ${process.env.NODE_ENV}`);
+    console.log('listening to port 3003');
+  }
 });
