@@ -21,7 +21,7 @@ function* findMovie (action) {
 }
 
 function* homeSagas() {
-  yield takeEvery(SEARCH_MOVIE_SEND, findMovie);
+  yield takeLatest(SEARCH_MOVIE_SEND, findMovie);
 }
 
 export default homeSagas;

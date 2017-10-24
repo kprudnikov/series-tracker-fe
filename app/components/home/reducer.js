@@ -1,4 +1,5 @@
 import {
+  SEARCH_MOVIE_SEND,
   SEARCH_MOVIE_SUCCESS,
   SEARCH_TV_SUCCESS,
   UPDATE_SEARCH_QUERY,
@@ -13,6 +14,11 @@ const initialState = {
 
 export default function (state=initialState, action) {
   switch (action.type) {
+    case SEARCH_MOVIE_SEND:
+      return {
+        ...state,
+        searchQuery: action.query,
+      };
     case SEARCH_MOVIE_SUCCESS:
       return {
         ...state,

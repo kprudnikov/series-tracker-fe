@@ -10,14 +10,23 @@ function searchMovie (query) {
   return get('search/movie', { query });
 }
 
-
 function searchTVSeries (query) {
   return get('search/tv', { query });
 }
 
+function getMovieById(id) {
+  return get(`movie/${id}`);
+}
+
+function getSeriesById(id) {
+  return get(`tv/${id}`);
+}
+
 // private
+const emptyObject = {};
 
 function get (url, query) {
+  query = query || emptyObject;
   return fetch(`${apiBaseUrl}/${url}?api_key=${apiKey}&${jsonToParams(query)}`)
     .then(response => response.json());
 }
